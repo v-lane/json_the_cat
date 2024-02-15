@@ -17,14 +17,13 @@ request.get(searchUrl, (error, response, body) => {
   } else {
     const data = JSON.parse(body);
     if (data === " ") {
-      console.log(`nothing data`)
+      console.log(`nothing data`);
     }
     try {
       const description = data[0].description;
       console.log(description);
     } catch (error) {
-      console.log("This cat breed does not exist.")
+      console.log("This cat breed does not exist.");
     }
-  };
-})
-
+  }
+});
